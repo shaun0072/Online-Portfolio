@@ -31,6 +31,7 @@ gulp.task("minifyScripts", ["concatScripts"], function() {
 
 gulp.task('compileSass', function() {
   return gulp.src("scss/style.scss")
+  
       .pipe(maps.init())
 	  .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
       .pipe(sass())
